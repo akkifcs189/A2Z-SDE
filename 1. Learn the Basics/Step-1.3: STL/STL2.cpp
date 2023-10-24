@@ -2,11 +2,15 @@
 //  Stack
 //	Queue
 //	Priority Queue
+//	Set
+//	Multiset
+//	Unordered Set
 
 #include <iostream>
 #include <stack>
 #include <queue>	//works for queue and priority_queue
 #include <set>		//works for set and multiset
+#include <unordered_set>    //works for unordered set
 using namespace std;
 
 void explainStacks() {
@@ -100,12 +104,25 @@ void explainMultiSet() {
 	cout << ms.count(4) << endl;
 }
 
+void explainUnorderedSet() {
+    unordered_set<int> uset;
+    uset.insert(3);
+    uset.insert(2);
+    uset.insert(5);
+
+    //Rest all Functions same as set/multiset
+    //unique elements but not sorted
+    //Time Complexity is O(1)
+    //Worst case is O(N) which is once in a blue moon event
+}
+
 int main() {
 
 	//explainQueue();
 	//explainPriorityQueue();
 	//explainSet();
-	explainMultiSet();
+	//explainMultiSet();
+    explainUnorderedSet();
 	
     return 0;
 }
